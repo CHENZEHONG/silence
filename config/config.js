@@ -1,6 +1,6 @@
 const defaultConfig = require('./config.default')
 
-const config = {}
+let config = {}
 
 if (process.env.NODE_ENV === 'dev'){
     console.log(`Load ${defaultConfig}...`);

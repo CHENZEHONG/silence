@@ -1,15 +1,18 @@
 const sequelize = require('../../plugins/sequelize')
 const Sequelize = require('sequelize')
 
-const User = sequelize.define('user',{
-    id: {
+const User = sequelize.define('user', {
+    userId: {
         type: Sequelize.STRING(50),
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true,
     },
-    name: Sequelize.STRING(100),
-    
-    createdAt: Sequelize.BIGINT,
-    updatedAt: Sequelize.BIGINT,
+    username: Sequelize.STRING(100),
+    password: Sequelize.STRING(100),
+    // createdAt: Sequelize.DATE,
+    // updatedAt: Sequelize.DATE,
 }, {
-    timestamps: false
-})
+        timestamps: false
+    })
+
+module.exports = User

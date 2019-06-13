@@ -10,8 +10,11 @@
   "author": "naian",
   "license": "ISC",
   "dependencies": {
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
     "koa2": "^2.0.0-alpha.7",
     "md5": "^2.2.1",
+    "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.9"
   }
