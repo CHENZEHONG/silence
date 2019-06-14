@@ -10,7 +10,6 @@ const initDatabase = require('./init/initDatabase')
 
 
 app.use(bodyparser());
-
 app.use(static(
     path.join(__dirname, staticPath)
 ))
