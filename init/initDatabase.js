@@ -1,9 +1,9 @@
 const mysql = require('mysql2')
 const Config = require('../config/config')
 
-const dbInit = {}
 
-async function createDatabase() {
+
+const dbInit = async function createDatabase() {
     let connection = await mysql.createConnection({
         host: Config.host,
         user: Config.username,
@@ -21,6 +21,5 @@ async function createDatabase() {
     )
 }
 
-dbInit.init = createDatabase()
 
 module.exports = dbInit

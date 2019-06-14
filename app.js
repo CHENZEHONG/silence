@@ -6,6 +6,7 @@ const bodyparser = require('koa-bodyparser');
 const static = require('koa-static')
 const path = require('path')
 const staticPath = './static'
+const initDatabase = require('./init/initDatabase')
 
 
 app.use(bodyparser());
@@ -15,6 +16,15 @@ app.use(static(
 ))
 
 router(app)
-app.listen(8080, () => {
-    console.log('server is running at http://localhost:8080')
-})
+
+
+async function start() {
+    // await initDatabase()
+    
+    app.listen(8080, () => {
+        console.log('server is running at http://localhost:8080')
+    })
+}
+
+
+start()

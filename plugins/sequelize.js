@@ -13,4 +13,6 @@ const sequelize = new Sequelize(sequelizeConfig.database, sequelizeConfig.userna
         idle: 10000
     },
 })
+
+// sequelize.sync()
 module.exports = sequelize;
