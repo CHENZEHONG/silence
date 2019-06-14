@@ -9,10 +9,11 @@ const User = sequelize.define('user', {
     },
     username: Sequelize.STRING(100),
     password: Sequelize.STRING(100),
-    // createdAt: Sequelize.DATE,
-    // updatedAt: Sequelize.DATE,
-}, {
-        timestamps: false
-    })
+},
+    {
+        timestamps: true
+    }
+)
+
 
 module.exports = User

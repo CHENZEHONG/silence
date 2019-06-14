@@ -9,7 +9,6 @@ const staticPath = './static'
 
 
 app.use(bodyparser());
-
 app.use(static(
     path.join(__dirname, staticPath)
 ))
