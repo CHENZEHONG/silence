@@ -18,7 +18,7 @@ router(app)
 
 
 async function start() {
-    // await initDatabase()
+    await initDatabase()
     
     app.listen(8080, () => {
         console.log('server is running at http://localhost:8080')

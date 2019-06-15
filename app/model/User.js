@@ -3,17 +3,26 @@ const Sequelize = require('sequelize')
 
 const User = sequelize.define('user', {
     userId: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
     username: Sequelize.STRING(100),
     password: Sequelize.STRING(100),
-},
-    {
-        timestamps: true
-    }
-)
+}, {
+    timestamps: true
+})
+// model 同步到数据库
+User.sync().then((result) => { 
+    //   User.findOne({
+    //         username: 'admin'
+    // }).then(() => {
+    //     User.create({
+    //         username: 'admin',
+    //         password: '12345678'
+    //     })
+    // })
+})
 
 
 module.exports = User

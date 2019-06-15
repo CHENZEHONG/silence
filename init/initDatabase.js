@@ -1,5 +1,5 @@
 const mysql = require('mysql2')
-const Config = require('../config/config')
+const Config = require('../config/config').sequelize
 
 
 
@@ -15,8 +15,8 @@ const dbInit = async function createDatabase() {
         collate utf8_general_ci`,
         function (err, results, fields) {
             console.log(results); // results contains rows returned by server
-            console.log(fields); // fields contains extra meta data about results, if available
-            if (err) console.log(err);
+            if (fields) console.log(fields); // fields contains extra meta data about results, if available
+            if (err) console.log(err)
         }
     )
 }
