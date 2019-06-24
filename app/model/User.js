@@ -12,16 +12,15 @@ const User = sequelize.define('user', {
 }, {
     timestamps: true
 })
+
 // model 同步到数据库
-User.sync().then((result) => { 
-    //   User.findOne({
-    //         username: 'admin'
-    // }).then(() => {
-    //     User.create({
-    //         username: 'admin',
-    //         password: '12345678'
-    //     })
-    // })
+User.sync().then((result) => {
+    User.findOrCreate({
+        where:{
+            username:'admin',
+            password:'12345678'
+        }
+    })
 })
 
 
