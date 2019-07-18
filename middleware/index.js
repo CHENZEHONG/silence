@@ -1,21 +1,16 @@
-const bodyparser = require('koa-bodyparser')
-const static = require('koa-static')
-// const logger = require('koa-logger')
-// const Moment = require('moment')
-const path = require('path')
+const bodyparser = require('koa-bodyparser');
+const static = require('koa-static');
+const path = require('path');
 const json = require('koa-json');
-const logger = require('./log4js')
-const staticPath = '../static'
+const logger = require('./log4js');
+const session = require('koa-session');
+const staticPath = '../static';
 
+const SessionStore= require('../app/mongo/sessionStore');
+const Mongoose = require('../plugins/mongoose');
 
 
 module.exports = (app) => {
-    // app.use(logger((str) => {
-    //     const logTxt = Moment().format('YYYY-MM-DD HH:mm:ss') + str
-    //     fs.appendFile(path.resolve(__dirname, logPath), logTxt, function (err) {
-    //         if (err) console.log(err)
-    //     })
-    // }));
     app.use(json());
     app.use(async (ctx, next) => {
         const start = new Date();
@@ -28,9 +23,28 @@ module.exports = (app) => {
             intervals = new Date() - start;
             logger.logError(ctx, error, intervals);
         }
-    })
+    });
     app.use(bodyparser());
     app.use(static(
         path.resolve(__dirname, staticPath)
     ));
-}
+
+    app.keys = ['this is some secret '];
+    const CONFIG = {
+        key: 'koa:sess',
+        maxAge: 1000 * 60 * 60 * 24,
+        autoCommit: true,
+        overwrite: true,
+        httpOnly: true,
+        signed: true,
+        rolling: false,
+        renew: false,
+        store:new SessionStore({
+            collection:'session',
+            connection:Mongoose,
+            expires: 86400,
+            name:'session'
+        }),
+    };
+    app.use(session(CONFIG, app));
+};

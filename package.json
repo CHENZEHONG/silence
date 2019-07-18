@@ -10,15 +10,18 @@
   "author": "naian",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^6.0.1",
     "koa-bodyparser": "^4.2.1",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
+    "koa-session": "^5.12.2",
     "koa-static": "^5.0.0",
     "koa2": "^2.0.0-alpha.7",
     "log4js": "^4.3.1",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
+    "mongoose": "^5.6.4",
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.9"

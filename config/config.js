@@ -1,12 +1,11 @@
-const defaultConfig = require('./config.default')
+const defaultConfig = require('./config.default');
 
-let config = {}
+let config = {};
 
 if (process.env.NODE_ENV === 'dev'){
-    // console.log(`Load ${defaultConfig}...`);
     config = defaultConfig
 }else{
     
 }
 
-module.exports = config
+module.exports = config;
