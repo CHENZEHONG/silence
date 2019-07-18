@@ -1,3 +1,5 @@
+'use strict';
+
 const Stream = require('stream');
 const fs = require('fs');
 
@@ -10,8 +12,6 @@ const Transform = Stream.Transform;
 // `fs.createReadStream`创建一个`Readable`对象以读取`bigFile`的内容，并输出到标准输出
 // 如果使用`fs.readFile`则可能由于文件过大而失败
 // fs.createReadStream(bigFile).pipe(process.stdout);
-
-'use strict';
 
 class ToReadable extends Readable {
     constructor(iterable) {

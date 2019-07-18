@@ -43,6 +43,7 @@ module.exports = {
                 }
             );
         }
-    }
-
+    },
+    editInfo: async (ctx, next) => {
+    },
 };
