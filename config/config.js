@@ -7,6 +7,8 @@ if (process.env.NODE_ENV === 'dev') {
     config = devConfig;
 } else if (process.env.NODE_ENV === 'test') {
     config = testConfig;
+}else {
+    config = devConfig;
 }
 
 module.exports = config;

@@ -1,17 +1,19 @@
 const bodyparser = require('koa-bodyparser');
 const static = require('koa-static');
 const path = require('path');
-const json = require('koa-json');
+const Koa_json = require('koa-json');
 const logger = require('./log4js');
 const session = require('koa-session');
+const Cors = require('@koa/cors');
 const staticPath = '../static';
 
-const SessionStore= require('../app/mongo/sessionStore');
+const SessionStore = require('../app/mongo/sessionStore');
 const Mongoose = require('../plugins/mongoose');
 
 
 module.exports = (app) => {
-    app.use(json());
+    app.use(Cors());
+    app.use(Koa_json());
     app.use(async (ctx, next) => {
         const start = new Date();
         let intervals;
@@ -39,11 +41,11 @@ module.exports = (app) => {
         signed: true,
         rolling: false,
         renew: false,
-        store:new SessionStore({
-            collection:'session',
-            connection:Mongoose,
+        store: new SessionStore({
+            collection: 'session',
+            connection: Mongoose,
             expires: 86400,
-            name:'session'
+            name: 'session'
         }),
     };
     app.use(session(CONFIG, app));
