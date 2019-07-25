@@ -1,5 +1,6 @@
 const UserService = require('../service/User');
 const md5 = require('md5');
+const redis = require('../../plugins/redis');
 
 module.exports = {
     getUser: async (ctx, next) => {
@@ -42,6 +43,7 @@ module.exports = {
                     overwrite: false
                 }
             );
+            redis.set('sessionId', ctx.request.body.username);
         }
     },
     editInfo: async (ctx, next) => {
