@@ -5,3 +5,5 @@ package-lock.json
 logs
 
 .idea
+
+.DS_Store

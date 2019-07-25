@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .test {
+            background: yellow;
+            position: relative;
+            text-align: center;
+            width: 150px;
+        }
+
+        .test::before {
+            position: absolute;
+            content: '';
+            height: 5px;
+            width: 10px;
+            background: blue;
+            left: 2px;
+            top: 50%;
+        }
+
+        .test::after {
+            position: absolute;;
+            content: '';
+            height: 5px;
+            width: 10px;
+            background: aqua;
+            right: 2px;
+            top: 50%;
+        }
+    </style>
 </head>
 <body>
-    hello koa2
+hello koa2
+<div class="test">woshiwenben</div>
 </body>
 </html>
