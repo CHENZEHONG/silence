@@ -15,7 +15,7 @@ module.exports = {
             // node_args: '--harmony',     // node的启动模式
             env: {
                 NODE_ENV: 'dev',        // 设置运行环境
-                // ORIGIN_ADDR: 'https://www.zemun.app'
+                ORIGIN_ADDR: 'https://www.zemun.app'
             },
             // env_production: {
             //     NODE_ENV: 'production',
