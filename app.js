@@ -14,6 +14,7 @@ const port = process.env.PORT || 1113;
 middleware(app);
 router(app);
 
+// todo socket.io 和 pm2 多进程存在问题
 io.on('connection', socket => {
     socket.on('chat message', function (msg) {
         console.log(msg);

@@ -4,7 +4,7 @@ module.exports = {
             name: 'silence',            // 应用名称
             script: './app.js',         // 启动文件地址
             cwd: './',                  // 当前工作路径
-            instances : "max",          // 表示PM2将自动检测可用CPU的数量并运行尽可能多的进程
+            instances : "max",          // 表示PM2将自动检测可用CPU的数量并运行尽可能多的进程 仅在cluster模式有效
             exec_mode : "cluster",      // pm2 两种模式 默认fork 单实例多进程  cluster模式，多实例多进程
             watch: [                    // 监控变化的目录，一旦变化，自动重启
             ],
