@@ -6,7 +6,7 @@ module.exports = {
     getUser: async (ctx, next) => {
         if (ctx.cookies.get('username')) {
             ctx.response.body = await UserService.getUser();
-            // 设置session
+            // 设置session 放入mongodb中
             let n = ctx.session.views || 0;
             ctx.session.views = ++n;
         } else {
@@ -43,6 +43,7 @@ module.exports = {
                     overwrite: false
                 }
             );
+            // 把username放入redis
             redis.set('sessionId', ctx.request.body.username);
         }
     },

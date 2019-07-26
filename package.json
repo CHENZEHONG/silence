@@ -6,10 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test nodemon app.js",
     "dev": "NODE_ENV=dev nodemon app.js",
-    "devsetup": "pm2 deploy ecosystem.config.js dev setup",
-    "devpm2": "pm2 deploy ecosystem.config.js dev",
-    "prosetup": "pm2 deploy ecosystem.config.js production setup",
-    "propm2": "pm2 deploy ecosystem.config.js production"
+    "pm2": "pm2 start pm2.config.js"
   },
   "author": "zemun",
   "license": "ISC",

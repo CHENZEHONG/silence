@@ -1,0 +1,106 @@
+2019-07-26 10:00 +08:00: server is running at http://localhost:1113
+2019-07-26 10:00 +08:00: Mongodb Connection Successful
+2019-07-26 10:00 +08:00: ResultSetHeader {
+2019-07-26 10:00 +08:00:   fieldCount: 0,
+2019-07-26 10:00 +08:00:   affectedRows: 1,
+2019-07-26 10:00 +08:00:   insertId: 0,
+2019-07-26 10:00 +08:00:   info: '',
+2019-07-26 10:00 +08:00:   serverStatus: 2,
+2019-07-26 10:00 +08:00:   warningStatus: 3
+2019-07-26 10:00 +08:00: }
+2019-07-26 10:00 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:00 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:00 +08:00: Executing (f1a63bd2-3990-41b9-a76d-fb329165d2a4): START TRANSACTION;
+2019-07-26 10:00 +08:00: Executing (f1a63bd2-3990-41b9-a76d-fb329165d2a4): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:00 +08:00: Executing (f1a63bd2-3990-41b9-a76d-fb329165d2a4): COMMIT;
+2019-07-26 10:01 +08:00: Executing (default): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user`;
+2019-07-26 10:02 +08:00: server is running at http://localhost:1113
+2019-07-26 10:02 +08:00: Mongodb Connection Successful
+2019-07-26 10:02 +08:00: ResultSetHeader {
+2019-07-26 10:02 +08:00:   fieldCount: 0,
+2019-07-26 10:02 +08:00:   affectedRows: 1,
+2019-07-26 10:02 +08:00:   insertId: 0,
+2019-07-26 10:02 +08:00:   info: '',
+2019-07-26 10:02 +08:00:   serverStatus: 2,
+2019-07-26 10:02 +08:00:   warningStatus: 3
+2019-07-26 10:02 +08:00: }
+2019-07-26 10:02 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:02 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:02 +08:00: Executing (c9651792-57ff-47e1-ac58-1681c576acdc): START TRANSACTION;
+2019-07-26 10:02 +08:00: Executing (c9651792-57ff-47e1-ac58-1681c576acdc): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:02 +08:00: Executing (c9651792-57ff-47e1-ac58-1681c576acdc): COMMIT;
+2019-07-26 10:07 +08:00: server is running at http://localhost:1113
+2019-07-26 10:07 +08:00: Mongodb Connection Successful
+2019-07-26 10:07 +08:00: ResultSetHeader {
+2019-07-26 10:07 +08:00:   fieldCount: 0,
+2019-07-26 10:07 +08:00:   affectedRows: 1,
+2019-07-26 10:07 +08:00:   insertId: 0,
+2019-07-26 10:07 +08:00:   info: '',
+2019-07-26 10:07 +08:00:   serverStatus: 2,
+2019-07-26 10:07 +08:00:   warningStatus: 3
+2019-07-26 10:07 +08:00: }
+2019-07-26 10:07 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:07 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:07 +08:00: Executing (b11de7e5-c63a-49af-a41e-7bf1d6985825): START TRANSACTION;
+2019-07-26 10:07 +08:00: Executing (b11de7e5-c63a-49af-a41e-7bf1d6985825): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:07 +08:00: Executing (b11de7e5-c63a-49af-a41e-7bf1d6985825): COMMIT;
+2019-07-26 10:13 +08:00: server is running at http://localhost:1113
+2019-07-26 10:13 +08:00: Mongodb Connection Successful
+2019-07-26 10:13 +08:00: ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 3
+}
+2019-07-26 10:13 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:13 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:13 +08:00: Executing (27c66595-0993-4b2f-b229-239b8eecd306): START TRANSACTION;
+2019-07-26 10:13 +08:00: Executing (27c66595-0993-4b2f-b229-239b8eecd306): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:13 +08:00: Executing (27c66595-0993-4b2f-b229-239b8eecd306): COMMIT;
+2019-07-26 10:13 +08:00: server is running at http://localhost:1113
+2019-07-26 10:13 +08:00: Mongodb Connection Successful
+2019-07-26 10:13 +08:00: ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 3
+}
+2019-07-26 10:13 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:13 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:13 +08:00: Executing (ec86ccb4-e473-4388-956d-7e9b399d9c90): START TRANSACTION;
+2019-07-26 10:13 +08:00: Executing (ec86ccb4-e473-4388-956d-7e9b399d9c90): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:13 +08:00: Executing (ec86ccb4-e473-4388-956d-7e9b399d9c90): COMMIT;
+2019-07-26 10:13 +08:00: server is running at http://localhost:1113
+2019-07-26 10:13 +08:00: server is running at http://localhost:1113
+2019-07-26 10:13 +08:00: Mongodb Connection Successful
+2019-07-26 10:13 +08:00: Mongodb Connection Successful
+2019-07-26 10:13 +08:00: ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 3
+}
+2019-07-26 10:13 +08:00: ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 3
+}
+2019-07-26 10:13 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:13 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:13 +08:00: Executing (92ff943e-661e-4aa2-8c37-d6036224d40c): START TRANSACTION;
+2019-07-26 10:13 +08:00: Executing (92ff943e-661e-4aa2-8c37-d6036224d40c): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:13 +08:00: Executing (92ff943e-661e-4aa2-8c37-d6036224d40c): COMMIT;
+2019-07-26 10:13 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`userId` INTEGER auto_increment , `username` VARCHAR(100), `password` VARCHAR(100), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`userId`)) ENGINE=InnoDB;
+2019-07-26 10:13 +08:00: Executing (default): SHOW INDEX FROM `users`
+2019-07-26 10:13 +08:00: Executing (f0671c9c-b0ea-4c89-9121-1afa44e2ec6f): START TRANSACTION;
+2019-07-26 10:13 +08:00: Executing (f0671c9c-b0ea-4c89-9121-1afa44e2ec6f): SELECT `userId`, `username`, `password`, `createdAt`, `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'admin' AND `user`.`password` = '12345678' LIMIT 1;
+2019-07-26 10:13 +08:00: Executing (f0671c9c-b0ea-4c89-9121-1afa44e2ec6f): COMMIT;
