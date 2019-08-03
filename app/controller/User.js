@@ -16,7 +16,7 @@ module.exports = {
             let payload = await jwt.verify(token, secret);
             let {time, timeout} = payload;
             let data = new Date().getTime();
-            if (data-time<=timeout){
+            if (data - time <= timeout) {
                 // Token 未过期
                 console.log('Token 未过期')
             } else {
@@ -71,4 +71,29 @@ module.exports = {
     },
     editInfo: async (ctx, next) => {
     },
+    login: async (ctx, next) => {
+        let user = ctx.request.body;
+        user.password = md5(user.password);
+        let result = await UserService.login(user.username, user.password);
+
+        // 创建Token
+        let payload = {username: user.username, time: new Date().getTime(), timeout: 1000 * 60 * 60 * 2};
+        let token = jwt.sign(payload, secret);
+
+        if (result.length !== 0) {
+            ctx.response.body = {
+                message: 'success login',
+                code: 1,
+                data: {
+                    token
+                }
+            }
+        } else {
+            ctx.status = 401;
+            ctx.response.body = {
+                message: 'failed login',
+                code: 0
+            }
+        }
+    }
 };

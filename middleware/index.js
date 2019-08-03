@@ -10,8 +10,10 @@ const staticPath = '../static';
 const SessionStore = require('../app/mongo/sessionStore');
 const Mongoose = require('../plugins/mongoose');
 
+const check = require('./tokencheck');
 
 module.exports = (app) => {
+
     app.use(Cors());
     app.use(Koa_json());
     app.use(async (ctx, next) => {
@@ -49,4 +51,5 @@ module.exports = (app) => {
         }),
     };
     app.use(session(CONFIG, app));
+    app.use(check);
 };

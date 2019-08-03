@@ -14,5 +14,13 @@ module.exports = {
                 password: password
             }
         })
+    },
+    login: async (username, password) => {
+        return await UserModel.findAll({
+            where: {
+                username: username,
+                password: password
+            }
+        })
     }
 }

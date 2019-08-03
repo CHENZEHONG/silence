@@ -18,7 +18,7 @@ User.sync().then((result) => {
     User.findOrCreate({
         where:{
             username:'admin',
-            password:'12345678'
+            password:'6ac1e56bc78f031059be7be854522c4c'
         }
     })
 })
